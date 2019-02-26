@@ -8,7 +8,7 @@ Date: February 20, 2019
 
 ### How to compile and run:
 
-Download and unzip the .tar.gz file in your working directory. You should then contain the following files such as those listed in the screenshot below:
+Download and unzip the .zip file in your working directory. You should then contain the following files such as those listed in the screenshot below:
 
 ![](img/ls.png)
 
