@@ -46,25 +46,29 @@ final class Instructions
         {
             next = scanString.next();
 
-            switch (next) 
+            if (next.equalsIgnoreCase("CREATE"))
             {
-                case "CREATE":
-                    create(scanString);
-                    break;
-                case "DROP":
-                    drop(scanString);
-                    break;
-                case "USE":
-                    use(scanString);
-                    break;
-                case "SELECT":
-                    select(scanString);
-                    break;
-                case "ALTER":
-                    alter(scanString);
-                    break;
-                case ".EXIT":
-                    System.exit(0);
+                create(scanString);
+            }
+            else if (next.equalsIgnoreCase("DROP"))
+            {
+                drop(scanString);
+            }
+            else if (next.equalsIgnoreCase("USE"))
+            {
+                use(scanString);
+            }
+            else if (next.equalsIgnoreCase("SELECT"))
+            {
+                select(scanString);
+            }
+            else if (next.equalsIgnoreCase("ALTER"))
+            {
+                alter(scanString);
+            }
+            else if (next.equalsIgnoreCase(".EXIT"))
+            {
+                System.exit(0);
             }
         }
 
@@ -89,11 +93,11 @@ final class Instructions
         {
             next = scanString.next();
 
-            if(next.equals("DATABASE"))
+            if(next.equalsIgnoreCase("DATABASE"))
             {
                 createDatabase(scanString);
             }
-            else if(next.equals("TABLE"))
+            else if(next.equalsIgnoreCase("TABLE"))
             {
                 createTable(scanString);
             }
@@ -231,7 +235,7 @@ final class Instructions
                     {
                         String operation = scanString.next();
 
-                        if(operation.equals("ADD"))
+                        if(operation.equalsIgnoreCase("ADD"))
                         {
                             addToTable(scanString, table);
                         }
@@ -292,11 +296,11 @@ final class Instructions
         {
             next = scanString.next();
 
-            if(next.equals("DATABASE"))
+            if(next.equalsIgnoreCase("DATABASE"))
             {
                 dropDatabase(scanString);
             }
-            else if(next.equals("TABLE"))
+            else if(next.equalsIgnoreCase("TABLE"))
             {
                 dropTable(scanString);
             }
